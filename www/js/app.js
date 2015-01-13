@@ -59,6 +59,16 @@ angular.module('mm', ['ionic', 'mm.auth', 'mm.site', 'mm.files', 'mm.preferences
       }
     })
 
+    .state('site.parts', {
+      url: '/parts?courseid',
+      views: {
+        'site': {
+          controller: 'mmCourseParticipants',
+          templateUrl: 'tpl/site-course-participants.html'
+        }
+      }
+    })
+
     .state('site.notifications', {
       url: '/notifications',
       views: {
